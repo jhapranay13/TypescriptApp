@@ -1,0 +1,56 @@
+.signup-contianer {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: black;
+    height: 30%;
+    width: 40%;
+    background-color: white;
+    border-radius: 3%;
+    padding: 2%;
+    margin-left: 30%;
+    margin-top: 7%;
+    position: relative;
+}
+
+.signup-header {
+    font-size: 160%;
+    font-weight: 700;
+    text-decoration: underline;
+    color: rgb(6, 6, 59);
+}
+
+.signup-contianer label {
+    margin-bottom: 8%;
+    color: rgb(6, 6, 59);
+    font-size: 120%;
+    margin-bottom: 2%;
+    width: 50%;
+    display: block;
+
+}
+
+.signup-contianer input[type=text],
+.signup-contianer input[type=password] {
+    font-size: 120%;
+    margin-bottom: 4%;
+}
+
+.signup-save, .signup-cancel {
+    height: 70%;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 30%;
+    font-size: 160%;
+    border-radius: 16px;
+    margin-bottom: 4%;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.signup-select {
+    font-size: 110%;
+    margin-bottom: 4%;
+    width: 47%
+}
+

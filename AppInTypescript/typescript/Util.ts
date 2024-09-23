@@ -1,0 +1,101 @@
+import { currLoggedInUser, userInfos } from "./Data.js";
+
+export let validationData : {
+    [component: string] : {
+        [fieldName: string] : string[]
+    }
+} = {};
+
+export const validate = (obj : any) : [boolean, string] => {
+    let isValid : boolean = false;
+    let message : string = '';
+    //Accessing __proto__ or [[prototype]] to get the name as I am using constructor replacement 
+    // so directly getting constructor name won't work
+    const validationConfig = validationData[Object.getPrototypeOf(obj!.constructor).name];
+    if (validationConfig) {
+        
+        outer:
+        for (const fieldName in validationConfig) {
+
+            if (!obj[`${fieldName}Dirty`]) {
+                continue;
+            }
+
+            for(const validator of validationConfig[fieldName]) {
+                const splitValid = validator.split('|');
+
+                switch (splitValid[0]) {
+                    case 'required':
+                        isValid = !!obj[fieldName];
+
+                        if (!isValid) {
+                            message = `${fieldName} is required`;
+                        }
+                        break;
+                    case 'minlength':
+                        isValid = obj[fieldName].length > 3;
+
+                        if (!isValid) {
+                            message = `${fieldName} length should be greater than 3`;
+                        }
+                        break;
+                    case 'uppercase':
+                        isValid = !(obj[fieldName].toLowerCase() === obj[fieldName])
+
+                        if (!isValid) {
+                            message = `${fieldName} should have atleast one uppercase`;
+                        }
+                        break;
+                }
+
+                if (!isValid) {
+                    break outer;
+                }
+            }
+        }
+    }    
+    return [isValid, message];
+};
+
+export const loginFetch = (uname: string, pwd: string) => {
+    let validLogin = false;
+    
+    for (const userInfo of userInfos) {
+
+        if (uname.toLocaleLowerCase() === userInfo['userName'] && 
+            pwd.trim() === userInfo['password']) {
+            validLogin = true;
+            currLoggedInUser.userName = userInfo['userName'];
+            currLoggedInUser.role = userInfo['role'];
+            currLoggedInUser.password = userInfo['password'];
+            validLogin = true;
+            break;
+        }       
+    }
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve(validLogin), 5000);
+    });
+};
+
+export const saveUserSignUp = (username: string, password: string, role: string) => {
+    let returnVal : boolean = true;
+
+    for (const userInfo of userInfos) {
+
+        if (username === userInfo['userName']) {
+            returnVal = false;
+            break;
+        }       
+    }
+
+    if (returnVal) {
+        userInfos.push({
+            ['userName']: username,
+            ['password']: password,
+            ['role']: role
+        });     
+    }
+    return new Promise((resolve, reject) => {
+        setTimeout(()=> resolve(returnVal), 3000);
+    });
+};

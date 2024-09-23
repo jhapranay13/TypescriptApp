@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+    <head>
+        <title>TypeScript App</title>
+        <link rel="stylesheet" href="styles/global-style.css"/>
+        <link rel="stylesheet" href="styles/general-info.css"/>
+        <link rel="stylesheet" href="styles/confirm.css"/>
+        <link rel="stylesheet" href="styles/login.css"/>
+        <link rel="stylesheet" href="styles/signup.css"/>
+        <link rel="stylesheet" href="styles/menubar.css"/>
+        <link rel="stylesheet" href="styles/main-header-component.css"/>
+        <link rel="stylesheet" href="styles/profile-management.css"/>
+        <link rel="stylesheet" href="styles/user-admin.css"/>
+        <link rel="stylesheet" href="styles/portal.css"/>
+
+
+        <script type="module" defer src="./script/app.js"></script>
+        <script type="module" defer src="./script/Util.js"></script>
+    </head>
+    <body class="background-color-grey">
+       <template id="cloak-loader">
+            <div class="cloak hidden"><div class="loader hidden"></div></div>
+        </template>
+        <template id="general-info">
+            <div class="ginfo hidden">
+                <div class="general-info">
+                    <div class="info-img-container">
+                        <img class='info-img' src="images/info.jpg"/>
+                    </div>
+                    <div class="info-text-btn-container">
+                        <div class="continer-x"><p id="general-info-close" class="text-x">X<p></div>
+        
+                        <div class="info-text-container">
+                            <p class="info-text"></p>
+                        </div>
+                        <div class="info_ok-contianer">
+                            <input type="button" class="info-ok-btn" value="ok">
+                        </div>
+                    </div>
+                </div> 
+            </div>  
+        </template>
+        <template id="confirm-box"> 
+            <div class="confirm-component hidden">
+                <div class="confirm-container">
+                    <div class="confirm-img-container">
+                        <img class="confirm-img" src="images/confirm.webp"/>
+                    </div> 
+                    <div class="confirm-text-container">   
+                        <p class="confirmation-text"></p>
+                        <div class="ok-cancel-btn-tab">
+                            <input type="button" class="confirmation-ok" value="Ok"/>
+                            <input type="button" class="confirmation-cancel" value="Cancel"/>
+                        </div>    
+                    </div>    
+                </div>
+            </div>
+        </template>
+        <template id="login">
+            <div class = "login background-cover-white">
+                <form action="" class="login-form">
+                    <div class="avatar-container">
+                        <img class="avatar-pic" src="images/avatar.jpg" />
+                    </div>
+                    <p class="login-uname-error hidden">* Error in User Name or password</p>
+                    <label for="uname">Username:</label>
+                    <input type = "text" id="uname" class="login-userid" placeholder="Username"/>
+                    <label for="pwd">Password:</label>
+                    <input type = "password" id ="pwd" class="login-password" placeholder="Password"/>
+                    <input type = "checkbox" tabindex="-1" class="show-pwd-checkbox" data-for-pwd="login-password"/>
+                    <input type="button" class="login-button" value="Login" disabled=true/>
+                </form>
+                <div class="new-user-link-container"><div></div><a class="signup-link">Click to signup</a><div></div></div>
+            </div> 
+        </template>
+        <template id="signup">
+            <div class="signup-contianer center-justify">
+                <p class="signup-header">Sign Up</p>
+                <div class="continer-x"><p id="signup-close" class="text-x">X<p></div>
+                <div class="error-container">
+                </div>
+                
+                <form action="" id="signup-form">
+                    <div class="center-justify">
+                        <label for="cuname">Enter Username:</label>
+                        <input type = "text" id="cuname" class="choosen-userid" placeholder="Enter Username"/>
+                    </div>
+                    <div class="center-justify choosen-role">
+                        <label for="role-drp">Select User Role:</label>
+                        <select id="role-drp" class="signup-select">
+                            <option value="admin" selected>Admin</option>
+                            <option value="premium">Premium</option>
+                            <option value="normal" selected>Normal</option>
+                        </select>
+                    </div>
+                    <div class="center-justify">
+                        <label for="entered-pwd">Enter Password:</label>
+                        <input type = "password" id="entered-pwd" class="choosen-pwd" placeholder="Enter Password"/>
+                        <input type = "checkbox" tabindex="-1" class="show-pwd-checkbox pwd" data-for-pwd="choosen-pwd"/>
+                    </div>
+                    <div class="center-justify">
+                        <label for="entered-pwd1">Confirm Password:</label>
+                        <input type = "password" id="entered-pwd1" class="choosen-pwd1" placeholder="Confirm Password"/>
+                        <input type = "checkbox" tabindex="-1" class="show-pwd-checkbox confPwd" data-for-pwd="choosen-pwd1"/>
+                    </div>
+                    <div class="center-justify">
+                        <input type = "button" class="signup-save" value="Save" disabled/>
+                    </div>
+                    <div class="center-justify">
+                        <input type = "button" class="signup-cancel" value="Cancel"/>
+                    </div>
+                </form>
+            </div>
+        </template>
+        <template id="landing">
+            <div class="landing-zone">
+                <div class="main-header">
+                    <div class="main-header-container">
+                        <div class="company-img">
+                            <img class="company-logo" src="images/company-logo.jpg"/>
+                        </div>
+                        <div class="system-name">
+                            <p class="system-id">Javascript Experiment</p>
+                        </div>
+                        <div class="profile-img-logout">
+                            <img class="profile-img" src="images/profile-pic.avif"/>
+                            <img class="logout-img" src="images/logout.png"/>
+                        </div>
+                    </div>
+                </div> 
+                <div class="menubar">
+                    <div class="menubar-container">
+                        <div class="menubar-img-container">
+                            <img class="menubar-img" src="images/menubar-icon.png"/>
+                        </div>
+                        <div class="menu-holder">
+                        </div>
+                    </div>    
+                </div> 
+                <div id="portal">
+                </div>
+            </div>
+        </template>
+        <template id="administration-component">
+            <div class="admin-component">
+                <div class="admin-container">
+                    <div class="admin-header-container">
+                        <button class="admin-header">User Account Management</button>
+                    </div>
+                    <div class="user-table-component hidden">
+                        <div class="user_table-search-container">
+                            <div class="search-continaer">
+                                <input class="search-text" type="text" placeholder="Search User Name"/>  
+                                <div class="user-table-operation">              
+                                    <img class="op-img" id="user-trash-img" src="images/trash.png"/>
+                                    <img class="op-img" id="user-save-img" src="images/save-icon.png"/>
+                                </div>
+                            </div>
+                            <div class="user-table-container">
+                                <table class="user-table">
+                                    <tr>
+                                        <th>
+                                            User Name
+                                        </th>
+                                        <th>
+                                            Password
+                                        </th>
+                                        <th>
+                                            Roles
+                                        </th>
+                                        <th>
+                                            Edit/Select
+                                        </th>
+                                    </tr>
+                                    <tbody class="user-record-container">
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="user-table-controls">
+                                <div class="recods-per-page-container"> 
+                                    <label class="-number-rcds-lbl">Number of records per page:</label>
+                                    <select class="records-per-page" name="record per page">
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                        <option value="15">15</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="75">75</option>
+                                        <option value="100">100</option>
+                                    </select>
+                                </div>    
+                                <div class="page-num-lbl-container">
+                                    <label class="page-number-lbl">Jump to Page:</label>
+                                    <div class="page-number-container">
+                                        <select class="page-number"></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <div id="cloak-portal"></div>
+        <div id="info-box-portal"></div>
+        <div id="confirm-box-portal"></div>
+        <div id="global-system-components"></div>
+    </body>
+</html>

@@ -1,0 +1,143 @@
+.user-table-component {
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.user_table-search-container {
+    text-align: center;
+}
+
+.user-table-operation {
+    display: inline-block;
+    margin-left: 30%;
+    margin-bottom: 0px;
+    position: relative;
+    margin-top: 0%;
+    padding: 0;
+}
+
+.admin-container {
+    margin-top: 30px;
+}
+
+.search-continaer {
+    padding: 0;
+}
+
+.search-text {
+    font-size: 17px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgb(77, 131, 231);
+    box-shadow: 2px 2px 2px rgba(41, 32, 73, 0.6);
+    margin-bottom: 1%;
+    padding: 3px;
+}
+
+.user-table {
+    border-style: groove;
+    border-color: rgb(77, 131, 231);
+    box-shadow: 2px 2px 2px rgba(41, 32, 73, 0.6);
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    border-collapse: collapse ;
+}
+
+.user-table th {
+    font-weight: 800;
+    color: white;
+    background-color: cadetblue;
+    width: 35px;
+    border: 1px solid;
+}
+
+.user-table td {
+    border: 1px solid;
+}
+
+.user-table tr:nth-child(odd) {
+    background-color: Lightgreen;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: rgb(218, 218, 199);
+}
+
+.password-input-text-green {
+    background-color: white;
+    border: none;
+    font-size: 17px;
+}
+
+.password-input-text-green:disabled {
+    background-color: Lightgreen;
+    border: none;
+    color: black;
+    text-decoration: solid;
+}
+
+.password-input-text-white {
+    background-color: white;
+    border: none;
+    font-size: 17px;
+}
+
+.password-input-text-white:disabled {
+    background-color: rgb(218, 218, 199);
+    border: none;
+    color: black;
+    text-decoration: solid;
+}
+
+.op-img {
+    object-fit: contain;
+    width: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.op-img:active {
+    opacity: 0.5;
+}
+
+.user-table-controls {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+    margin-right: 25%;
+    margin-top: 1%;
+    justify-content: space-between;
+}
+
+.records-per-page {
+    width: 45px;
+    height: 100%;
+    flex: 1;
+}
+
+.page-number {
+    height: 100%;
+    width: 50px;
+    background-color: white;
+    border-style: groove;
+    border-color: black;
+    display: inline-block;
+}
+
+.recods-per-page-container {
+    flex: 1;
+    justify-content: center;
+}
+
+.page-num-lbl-container {
+    display: flex;
+    text-align: center;
+    height: 120%;
+}
+
+.page-number-lbl{
+    margin-top: 1%;
+}

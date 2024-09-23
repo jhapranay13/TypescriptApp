@@ -1,0 +1,80 @@
+.main-header {
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: rgb(245, 245, 248);
+    color: rgb(53, 46, 46);
+    justify-content: center;
+    z-index: 100;
+    border-bottom: 1px solid rgb(39, 39, 117);
+    box-shadow: 3px 3px 3px rgba(41, 32, 73, 0.6);
+}
+
+.main-header-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    flex: 1;
+}
+
+.company-img {
+    flex: 1;
+    height: 20px;
+    flex-shrink: 2;
+}
+
+.system-name {
+    flex: 3;
+}
+
+.profile-img-logout {
+    flex: 1;
+    height: 100%;
+    padding-left: 2%;
+    flex-shrink: 0;
+    justify-content: left;
+    text-align: left;
+}
+
+.company-logo {
+    width: 100px;
+    object-fit: contain;
+    border-style: none;
+    border-radius: 50px;
+    margin-left: 15%;
+}
+
+.system-id {
+    font-size: 300%;
+    font-weight: 900;
+    text-align: center;
+    font-style: oblique;
+    color: rgb(30, 30, 129);
+    margin-top: 20px;
+}
+
+.profile-img {
+    object-fit: contain;
+    width: 70px;
+    height: 80px;
+    border-radius: 50px;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.logout-img {
+    object-fit: contain;
+    width: 68px;
+    border-radius: 50px;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    cursor: pointer;
+    position: fixed;
+}
+
+.logout-img:hover {
+    opacity: 0.6;
+}

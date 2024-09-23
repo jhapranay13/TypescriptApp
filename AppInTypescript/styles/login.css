@@ -1,0 +1,82 @@
+.login {
+    justify-content: space-between;
+    height: 30%;
+    width: 30%;
+    margin-top: 5%;
+    margin-left: 34%;
+    vertical-align: top;
+    padding: 3%;
+    border-radius: 5%;
+    border-style: groove;
+    border-color: rgb(114, 114, 228);
+    box-shadow: 3px 3px 3px rgba(50, 50, 97, 0.6);
+}
+
+.avatar-container {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15%;
+    margin-left: 25%;
+    margin-bottom: 3%;
+}
+
+.avatar-pic {
+   width: 100%;
+   object-fit: contain;
+   border-radius: 50%;
+}
+
+.login label {
+    color: rgb(6, 6, 59);
+    font-size: 120%;
+    margin-bottom: 1%;
+    width: 50%;
+    margin-left: 24%;
+}
+
+.login input[type=text],
+.login input[type=password ] {
+    font-size: 120%;
+    margin-bottom: 2%;
+    width: 50%;
+    margin-left: 24%;
+    padding: 2%;
+}
+
+.login-button {
+    cursor: pointer;
+    width: 50%;
+    margin-top: 2%;
+    box-shadow: 3px 3px 3px rgba(41, 32, 73, 0.6);
+    margin-left: 25%;
+    margin-right: 30%;
+    font-size: 160%;
+    border-radius: 16px;
+    color: rgb(80, 80, 177);
+    background-color: white;
+    border-style: solid;
+    border-color: rgb(80, 80, 177);
+    margin-bottom: 10%;
+    justify-content: center;
+}
+
+.login-uname-error {
+    margin-left: 25%;
+    color: rgb(212, 117, 136);
+    font-size: 120%;
+}
+
+
+.new-user-link-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    color: blue;
+    text-decoration: underline;
+    column-gap: 10%;
+}
+
+.signup-link {
+    cursor: pointer;
+}

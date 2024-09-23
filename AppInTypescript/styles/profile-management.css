@@ -1,0 +1,66 @@
+
+
+.profile-mgmt-container {
+    margin-left: 2%;
+    margin-right: 8%;
+    margin-top: 10px;
+}
+
+.profile-mgmt-header {
+    font-weight: 800;
+    font-size: 15px;
+    text-align: center; 
+    text-decoration: underline;
+}
+
+.profile-mgmt-form,
+.billing-mgmt-form {
+    margin-left: 18%;
+    border-color: black;
+    border-style: solid;
+    margin-right: 24%;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.grid-layout-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+}
+
+.profile-mgmt-form input[type=text],
+.billing-mgmt-form input[type=text] {
+    width: 87%;
+    padding: 2%;
+}
+
+.span-column-two {
+    grid-column: span 2;
+}
+
+.form-save-reset {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.form-button-style {
+    font-size: 200%;
+    margin: 10px;
+    color: white;
+    border-color: rgb(114, 114, 228);
+    box-shadow: 3px 3px 3px rgba(50, 50, 97, 0.6);
+    background-color: rgb(80, 80, 177);
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.form-button-style:hover {
+    color: rgb(80, 80, 177);
+    background-color: white;
+}
+
+.form-button-style:active {
+    opacity: 0.7;
+}
+
