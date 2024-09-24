@@ -99,3 +99,16 @@ export const saveUserSignUp = (username: string, password: string, role: string)
         setTimeout(()=> resolve(returnVal), 3000);
     });
 };
+
+export const filterResult = (searchVal : string) => {
+    const copyUser = userInfos.filter((userInfo, i, arr) => {
+
+        if (currLoggedInUser.userName === userInfo.userName ||
+            !userInfo.userName.includes(searchVal)) {
+
+            return false;
+        }
+        return true;
+    });
+    return copyUser;
+};

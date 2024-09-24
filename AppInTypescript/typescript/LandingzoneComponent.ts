@@ -58,7 +58,6 @@ export class LandingzoneComponent extends BaseComponent {
 
         for (const menuItem of menuItems!) {
             const menuButton : HTMLButtonElement = document.querySelector(`.${menuItem}`) as HTMLButtonElement;
-            console.log(menuButton);
             menuButton.addEventListener('click', () => {
                 currElementPortal?.destroy();
                 createComponentFromMap(menuItem);

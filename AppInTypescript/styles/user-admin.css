@@ -1,10 +1,13 @@
 .user-table-component {
     margin-bottom: 40px;
     margin-top: 20px;
+    background-color: white;
+
 }
 
 .user_table-search-container {
     text-align: center;
+
 }
 
 .user-table-operation {
@@ -18,6 +21,7 @@
 
 .admin-container {
     margin-top: 30px;
+    background-color: white;
 }
 
 .search-continaer {

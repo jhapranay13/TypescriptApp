@@ -77,3 +77,13 @@ export const saveUserSignUp = (username, password, role) => {
         setTimeout(() => resolve(returnVal), 3000);
     });
 };
+export const filterResult = (searchVal) => {
+    const copyUser = userInfos.filter((userInfo, i, arr) => {
+        if (currLoggedInUser.userName === userInfo.userName ||
+            !userInfo.userName.includes(searchVal)) {
+            return false;
+        }
+        return true;
+    });
+    return copyUser;
+};

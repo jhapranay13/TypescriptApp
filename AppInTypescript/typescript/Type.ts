@@ -11,3 +11,10 @@ export type UserRole = {
     password: string,
     role: string,
 };
+
+export type SelectedUser = {
+    userName: string,
+    password: string,
+    role: string,
+    selectedIndex: string
+};

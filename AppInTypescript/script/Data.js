@@ -72,3 +72,7 @@ menuTextMap.set('video-library', 'Video Library');
 menuTextMap.set('quiz-app', 'Quiz App');
 menuTextMap.set('manage-profile', 'Profile Management');
 menuTextMap.set('project-mgmt', 'Project Management');
+export const fetchUserData = () => {
+    const returnVal = userInfos.filter((userRole) => !(userRole.userName === currLoggedInUser.userName));
+    return new Promise((resolve, reject) => setTimeout(() => resolve(returnVal), 2000));
+};
